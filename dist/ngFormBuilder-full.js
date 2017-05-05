@@ -87424,7 +87424,6 @@ module.exports = function(app) {
 },{}],347:[function(_dereq_,module,exports){
 "use strict";
 module.exports = function(app) {
-  console.log('TEST!!!!');
   app.config([
     'formioComponentsProvider',
     function(formioComponentsProvider) {

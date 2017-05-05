@@ -1,5 +1,4 @@
 module.exports = function(app) {
-  console.log('TEST!!!!');
   app.config([
     'formioComponentsProvider',
     function(formioComponentsProvider) {
