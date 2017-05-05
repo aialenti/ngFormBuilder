@@ -87424,6 +87424,7 @@ module.exports = function(app) {
 },{}],347:[function(_dereq_,module,exports){
 "use strict";
 module.exports = function(app) {
+  console.log('TEST!!!!');
   app.config([
     'formioComponentsProvider',
     function(formioComponentsProvider) {
@@ -87479,7 +87480,7 @@ module.exports = function(app) {
           '<form-builder-option property="hidden"></form-builder-option>' +
           '<form-builder-option property="disabled"></form-builder-option>' +
           '<form-builder-option property="tableView"></form-builder-option>' +
-          '<br/>Pene 8==D<br/>' +
+          '<br/>Test!!!<br/>' +
         '</ng-form>'
       );
 
