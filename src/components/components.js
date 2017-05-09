@@ -116,10 +116,9 @@ module.exports = function(app) {
 		
       );
 	 // add by FAST ##############################################
-      $templateCache.put('formio/components/common/disable.html',
-        '<form-builder-conditional></form-builder-conditional>'
-		
-      ); 
+     // $templateCache.put('formio/components/common/disable.html',
+     //   '<form-builder-conditional></form-builder-conditional>'	
+//      ); 
     }
   ]);
 };
