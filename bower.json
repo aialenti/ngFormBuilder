@@ -1,31 +1,35 @@
 {
-  "name": "ng-formio-builder",
-  "main": [
-    "dist/ngFormBuilder.js",
-    "css/ngFormBuilder.css"
-  ],
-  "version": "2.16.3",
-  "authors": [
-    "Travis Tidwell <travis@form.io>"
-  ],
-  "description": "The Angular.JS form builder.",
-  "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "angular-drag-and-drop-lists": "^2.1.0",
-    "angular-bootstrap": "^2.5.0",
-    "ng-dialog": "^1.1.0",
-    "ng-formio": "^2.16.3",
-    "ng-tags-input": "^3.1.2",
-    "angular-ckeditor": "^1.0.3"
-  },
-  "devDependencies": {
-    "font-awesome": "^4.6.3"
-  }
+	"name": "ng-formio-builder",
+	"main": [
+		"dist/ngFormBuilder.js",
+		"css/ngFormBuilder.css"
+	],
+	"version": "2.16.3",
+	"authors": [
+		"Travis Tidwell <travis@form.io>"
+	],
+	"description": "The Angular.JS form builder.",
+	"license": "MIT",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"angular-drag-and-drop-lists": "^2.1.0",
+		"angular-bootstrap": "^2.5.0",
+		"ng-dialog": "^1.1.0",
+		"ng-formio": "^2.16.3",
+		"ng-tags-input": "^3.1.2",
+		"angular-ckeditor": "^1.0.3"
+	},
+	"devDependencies": {
+		"font-awesome": "^4.6.3"
+	},
+	"resolutions": {
+		"ng-formio-builder": "8.0.0",
+		"angular": "^1.6.4"
+	}
 }
