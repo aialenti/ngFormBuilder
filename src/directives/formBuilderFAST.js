@@ -10,7 +10,7 @@ module.exports = [
       template: '' +
         '<uib-accordion>' +
           '<div uib-accordion-group heading="Simple" class="panel panel-default" is-open="status.simple">' +
-            'This component should Display:' +
+            'ciaone:' +
             '<select class="form-control input-md" ng-model="component.conditional.show">' +
             '<option ng-repeat="item in _booleans track by $index" value="{{item}}">{{item.toString()}}</option>' +
             '</select>' +
