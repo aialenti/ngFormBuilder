@@ -113,12 +113,7 @@ module.exports = function(app) {
       // Create the common Layout tab markup.
       $templateCache.put('formio/components/common/conditional.html',
         '<form-builder-conditional></form-builder-conditional>'
-		
       );
-	 // add by FAST ##############################################
-     // $templateCache.put('formio/components/common/disable.html',
-     //   '<form-builder-conditional></form-builder-conditional>'	
-//      ); 
     }
   ]);
 };
