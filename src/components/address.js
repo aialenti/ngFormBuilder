@@ -56,7 +56,7 @@ module.exports = function(app) {
           '<form-builder-option property="disabled"></form-builder-option>' +
           '<form-builder-option property="tableView"></form-builder-option>' +
         '</ng-form>'+
-		'<strong>here I am!!</strong>'
+		'<strong>FABBIO!!</strong>'
       );
 
       $templateCache.put('formio/components/address/validate.html',

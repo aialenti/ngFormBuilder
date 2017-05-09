@@ -65927,6 +65927,7 @@ module.exports = function(app) {
 },{}],254:[function(_dereq_,module,exports){
 "use strict";
 
+var formioUtils = _dereq_('formiojs/utils');
 
 module.exports = function(app) {
   app.config([
@@ -65941,12 +65942,19 @@ module.exports = function(app) {
         tableView: function(data, component, $interpolate, componentInfo) {
           var view = '<table class="table table-striped table-bordered"><thead><tr>';
           angular.forEach(component.components, function(component) {
-            view += '<th>' + component.label + '</th>';
+            view += '<th>' + (component.label || '') + ' (' + component.key + ')</th>';
           });
           view += '</tr></thead>';
           view += '<tbody>';
           view += '<tr>';
-          angular.forEach(component.components, function(component) {
+          //angular.forEach(component.components, function(component) {
+          formioUtils.eachComponent(component.components, function(component) {
+            // Don't render disabled fields, or fields with undefined data.
+            if (!component.tableView || data[component.key] === undefined) {
+              return;
+            }
+
+            // If the component has a defined tableView, use that, otherwise try and use the raw data as a string.
             var info = componentInfo.components.hasOwnProperty(component.type) ? componentInfo.components[component.type] : {};
             if (info.tableView) {
               view += '<td>' +
@@ -65968,7 +65976,7 @@ module.exports = function(app) {
               view += ' ' + component.suffix;
             }
             view += '</td>';
-          });
+          }, true);
           view += '</tr>';
           view += '</tbody></table>';
           return view;
@@ -66005,7 +66013,7 @@ module.exports = function(app) {
   ]);
 };
 
-},{}],255:[function(_dereq_,module,exports){
+},{"formiojs/utils":34}],255:[function(_dereq_,module,exports){
 "use strict";
 
 module.exports = function(app) {
@@ -66176,6 +66184,8 @@ module.exports = function(app) {
 },{"../factories/GridUtils":295}],258:[function(_dereq_,module,exports){
 "use strict";
 
+var formioUtils = _dereq_('formiojs/utils');
+
 module.exports = function(app) {
   app.config([
     'formioComponentsProvider',
@@ -66187,13 +66197,20 @@ module.exports = function(app) {
         tableView: function(data, component, $interpolate, componentInfo) {
           var view = '<table class="table table-striped table-bordered"><thead><tr>';
           angular.forEach(component.components, function(component) {
-            view += '<th>' + component.label + '</th>';
+            view += '<th>' + (component.label || '') + ' (' + component.key + ')</th>';
           });
           view += '</tr></thead>';
           view += '<tbody>';
+
           angular.forEach(data, function(row) {
             view += '<tr>';
-            angular.forEach(component.components, function(component) {
+            formioUtils.eachComponent(component.components, function(component) {
+              // Don't render disabled fields, or fields with undefined data.
+              if (!component.tableView || row[component.key] === undefined) {
+                return;
+              }
+
+              // If the component has a defined tableView, use that, otherwise try and use the raw data as a string.
               var info = componentInfo.components.hasOwnProperty(component.type) ? componentInfo.components[component.type] : {};
               if (info.tableView) {
                 view += '<td>' + info.tableView(row[component.key] || '', component, $interpolate, componentInfo) + '</td>';
@@ -66292,7 +66309,7 @@ module.exports = function(app) {
   ]);
 };
 
-},{}],259:[function(_dereq_,module,exports){
+},{"formiojs/utils":34}],259:[function(_dereq_,module,exports){
 "use strict";
 
 module.exports = function(app) {
@@ -69313,10 +69330,7 @@ module.exports = [
 
                 var valid;
                 try {
-                  valid = jsonLogic.apply(input, {
-                    data: $scope.submission.data,
-                    row: $scope.data
-                  });
+                  valid = jsonLogic.apply(input, $scope.submission.data);
                 }
                 catch (err) {
                   valid = err.message;
@@ -70570,9 +70584,37 @@ module.exports = [
 "use strict";
 var formioUtils = _dereq_('formiojs/utils');
 
+// FOR-524 - Attempt to load json logic.
+var jsonLogic;
+try {
+  jsonLogic = _dereq_('json-logic-js') || undefined;
+}
+catch (e) {
+  // Ignore optional module.
+}
+
 module.exports = function() {
   return {
     checkVisible: function(component, row, data) {
+      // FOR-524 - Add json conditional visibility support.
+      if (jsonLogic && !!component.jsonConditional) {
+        try {
+          if (typeof component.jsonConditional === 'string') {
+            component.jsonConditional = JSON.parse(component.jsonConditional);
+          }
+
+          return !!jsonLogic.apply(component.jsonConditional, data);
+        }
+        catch (e) {
+          /* eslint-disable no-console */
+          console.warn('Invalid JSON validator given for ' + component.key);
+          console.warn(component.jsonConditional);
+          /* eslint-enable no-console */
+          delete component.jsonConditional;
+          return true; // Show by default.
+        }
+      }
+
       var visible = formioUtils.checkCondition(component, row, data);
       if (!visible) {
         if (!component.hasOwnProperty('clearOnHide') || component.clearOnHide.toString() === 'true') {
@@ -70678,7 +70720,7 @@ module.exports = function() {
   };
 };
 
-},{"formiojs/utils":34}],295:[function(_dereq_,module,exports){
+},{"formiojs/utils":34,"json-logic-js":35}],295:[function(_dereq_,module,exports){
 "use strict";
 module.exports = function() {
   var generic = function(data, component) {
@@ -74754,7 +74796,7 @@ module.exports = function(app) {
           '<form-builder-option property="disabled"></form-builder-option>' +
           '<form-builder-option property="tableView"></form-builder-option>' +
         '</ng-form>'+
-		'<strong>here I am!!</strong>'
+		'<strong>FABBIO!!</strong>'
       );
 
       $templateCache.put('formio/components/address/validate.html',
@@ -77171,7 +77213,6 @@ module.exports = function(app) {
           '<form-builder-option property="hidden"></form-builder-option>' +
           '<form-builder-option property="disabled"></form-builder-option>' +
           '<form-builder-option property="tableView"></form-builder-option>' +
-          '<br/>Test!!!<br/>' +
         '</ng-form>'
       );
 
