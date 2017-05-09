@@ -115,7 +115,6 @@ module.exports = function(app) {
         '<form-builder-conditional></form-builder-conditional>'
       );
 
-	   // Create the common Layout tab markup.
       $templateCache.put('formio/components/common/FAST.html',
         '<div></div>'
       );
