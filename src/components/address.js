@@ -25,6 +25,10 @@ module.exports = function(app) {
             name: 'Conditional',
             template: 'formio/components/common/conditional.html'
           },
+
+
+		  
+		   // add by FAST ##############################################
           {
             name: 'Disable',
             template: 'formio/components/common/disable.html'

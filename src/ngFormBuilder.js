@@ -96,6 +96,7 @@ app.directive('valueBuilder', require('./directives/valueBuilder'));
 
 app.directive('formBuilderConditional', require('./directives/formBuilderConditional'));
 
+ // add by FAST ##############################################
 app.directive('formBuilderDisable', require('./directives/formBuilderDisable'));
 
 /**

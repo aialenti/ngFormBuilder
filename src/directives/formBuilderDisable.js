@@ -1,3 +1,5 @@
+ // add by FAST ##############################################
+
 'use strict';
 var utils = require('formiojs/utils');
 var _get = require('lodash/get');
