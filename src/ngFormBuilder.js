@@ -95,6 +95,8 @@ app.directive('formBuilderTooltip', require('./directives/formBuilderTooltip'));
 app.directive('valueBuilder', require('./directives/valueBuilder'));
 
 app.directive('formBuilderConditional', require('./directives/formBuilderConditional'));
+
+app.directive('formBuilderFAST', require('./directives/formBuilderFAST'));
 /**
  * This workaround handles the fact that iframes capture mouse drag
  * events. This interferes with dragging over components like the

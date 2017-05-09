@@ -24,6 +24,10 @@ module.exports = function(app) {
           {
             name: 'Conditional',
             template: 'formio/components/common/conditional.html'
+          },
+          {
+            name: 'FAST',
+            template: 'formio/components/common/FAST.html'
           }
         ],
         documentation: 'http://help.form.io/userguide/#address'
