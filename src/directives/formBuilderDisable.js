@@ -8,6 +8,7 @@ module.exports = [
       restrict: 'E',
       scope: true,
       template: '' +
+	  	'IN FORM BUILDER DISABLE' + 
         '<uib-accordion>' +
           '<div uib-accordion-group heading="Simple" class="panel panel-default" is-open="status.simple">' +
             'This component should Display:' +
