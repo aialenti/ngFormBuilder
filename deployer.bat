@@ -6,7 +6,7 @@ rd /s /q %folder%
 :: GULP
 call gulp
 call git add .
-call git commit -a -m 'commit prova'
+call git commit -a -m "commit prova"
 call git push
 :: REMOVE BUILDER DIST
 ::FormIO\formio-app-formio\bower_components\ng-formio-builder
@@ -20,7 +20,7 @@ call bower install ng-formio-builder=https://github.com/aialenti/ngFormBuilder.g
 :: GULP
 call gulp
 call git add .
-call git commit -a -m 'commit prova'
+call git commit -a -m "commit prova"
 call git push
 
 cd D:\FormIO\hsd-form-io

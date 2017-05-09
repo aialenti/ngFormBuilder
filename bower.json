@@ -29,7 +29,6 @@
 		"font-awesome": "^4.6.3"
 	},
 	"resolutions": {
-		"ng-formio-builder": "8.0.0",
 		"angular": "^1.6.4"
 	}
 }
