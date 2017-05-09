@@ -6768,7 +6768,7 @@ module.exports = function(app) {
           },
           {
             name: 'Disable',
-            template: 'formio/components/common/conditional.html'
+            template: 'formio/components/common/disable.html'
           }
         ],
         documentation: 'http://help.form.io/userguide/#address'
