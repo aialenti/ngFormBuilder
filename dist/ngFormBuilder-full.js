@@ -85063,7 +85063,7 @@ module.exports = function(app) {
           '<form-builder-option property="disabled"></form-builder-option>' +
           '<form-builder-option property="tableView"></form-builder-option>' +
         '</ng-form>'+
-		'<strong>FABBIO!!</strong>'
+		'<strong>FABBIO2!!</strong>'
       );
 
       $templateCache.put('formio/components/address/validate.html',
