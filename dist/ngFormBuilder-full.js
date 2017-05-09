@@ -88269,6 +88269,8 @@ module.exports = [
 ];
 
 },{"formiojs/utils":35,"lodash/get":211,"lodash/reject":238}],354:[function(_dereq_,module,exports){
+arguments[4][353][0].apply(exports,arguments)
+},{"dup":353,"formiojs/utils":35,"lodash/get":211,"lodash/reject":238}],355:[function(_dereq_,module,exports){
 "use strict";
 var _isNumber = _dereq_('lodash/isNumber');
 var _camelCase = _dereq_('lodash/camelCase');
@@ -88533,7 +88535,7 @@ module.exports = [
   }
 ];
 
-},{"lodash/assign":200,"lodash/camelCase":201,"lodash/isNumber":223}],355:[function(_dereq_,module,exports){
+},{"lodash/assign":200,"lodash/camelCase":201,"lodash/isNumber":223}],356:[function(_dereq_,module,exports){
 "use strict";
 module.exports = [
   'formioElementDirective',
@@ -88558,7 +88560,7 @@ module.exports = [
   }
 ];
 
-},{}],356:[function(_dereq_,module,exports){
+},{}],357:[function(_dereq_,module,exports){
 "use strict";
 module.exports = [
   function() {
@@ -88581,7 +88583,7 @@ module.exports = [
   }
 ];
 
-},{}],357:[function(_dereq_,module,exports){
+},{}],358:[function(_dereq_,module,exports){
 "use strict";
 /**
 * This directive creates a field for tweaking component options.
@@ -88650,7 +88652,7 @@ module.exports = ['COMMON_OPTIONS', '$filter', function(COMMON_OPTIONS, $filter)
   };
 }];
 
-},{}],358:[function(_dereq_,module,exports){
+},{}],359:[function(_dereq_,module,exports){
 "use strict";
 /**
 * A directive for editing a component's custom validation.
@@ -88690,7 +88692,7 @@ module.exports = function() {
   };
 };
 
-},{}],359:[function(_dereq_,module,exports){
+},{}],360:[function(_dereq_,module,exports){
 "use strict";
 /**
 * A directive for a field to edit a component's key.
@@ -88736,7 +88738,7 @@ module.exports = function() {
   };
 };
 
-},{}],360:[function(_dereq_,module,exports){
+},{}],361:[function(_dereq_,module,exports){
 "use strict";
 /**
 * A directive for a field to edit a component's tags.
@@ -88780,7 +88782,7 @@ module.exports = function() {
   };
 };
 
-},{"lodash/map":231}],361:[function(_dereq_,module,exports){
+},{"lodash/map":231}],362:[function(_dereq_,module,exports){
 "use strict";
 module.exports = [
   function() {
@@ -88802,7 +88804,7 @@ module.exports = [
   }
 ];
 
-},{}],362:[function(_dereq_,module,exports){
+},{}],363:[function(_dereq_,module,exports){
 "use strict";
 /**
  * A directive for a table builder
@@ -88856,7 +88858,7 @@ module.exports = function() {
   };
 };
 
-},{"lodash/merge":233}],363:[function(_dereq_,module,exports){
+},{"lodash/merge":233}],364:[function(_dereq_,module,exports){
 "use strict";
 /**
 * Invokes Bootstrap's popover jquery plugin on an element
@@ -88897,7 +88899,7 @@ module.exports = ['$filter', function($filter) {
   };
 }];
 
-},{}],364:[function(_dereq_,module,exports){
+},{}],365:[function(_dereq_,module,exports){
 "use strict";
 module.exports = function() {
   return {
@@ -88934,7 +88936,7 @@ module.exports = function() {
   };
 };
 
-},{}],365:[function(_dereq_,module,exports){
+},{}],366:[function(_dereq_,module,exports){
 "use strict";
 /*
 * Prevents user inputting invalid api key characters.
@@ -88957,7 +88959,7 @@ module.exports = function() {
   };
 };
 
-},{}],366:[function(_dereq_,module,exports){
+},{}],367:[function(_dereq_,module,exports){
 "use strict";
 /**
 * A directive that provides a UI to add {value, label} objects to an array.
@@ -89038,7 +89040,7 @@ module.exports = function() {
   };
 };
 
-},{"lodash/camelCase":201,"lodash/map":231}],367:[function(_dereq_,module,exports){
+},{"lodash/camelCase":201,"lodash/map":231}],368:[function(_dereq_,module,exports){
 "use strict";
 'use strict';
 
@@ -89147,7 +89149,7 @@ module.exports = ['FormioUtils', function(FormioUtils) {
   };
 }];
 
-},{}],368:[function(_dereq_,module,exports){
+},{}],369:[function(_dereq_,module,exports){
 "use strict";
 // Create an AngularJS service called debounce
 module.exports = ['$timeout','$q', function($timeout, $q) {
@@ -89181,7 +89183,7 @@ module.exports = ['$timeout','$q', function($timeout, $q) {
   };
 }];
 
-},{}],369:[function(_dereq_,module,exports){
+},{}],370:[function(_dereq_,module,exports){
 "use strict";
 _dereq_('ng-formio/src/formio-full.js');
 _dereq_('angular-drag-and-drop-lists');
@@ -89189,7 +89191,7 @@ _dereq_('../bower_components/angular-ckeditor/angular-ckeditor');
 _dereq_('ng-dialog');
 _dereq_('./ngFormBuilder.js');
 
-},{"../bower_components/angular-ckeditor/angular-ckeditor":1,"./ngFormBuilder.js":370,"angular-drag-and-drop-lists":2,"ng-dialog":248,"ng-formio/src/formio-full.js":307}],370:[function(_dereq_,module,exports){
+},{"../bower_components/angular-ckeditor/angular-ckeditor":1,"./ngFormBuilder.js":371,"angular-drag-and-drop-lists":2,"ng-dialog":248,"ng-formio/src/formio-full.js":307}],371:[function(_dereq_,module,exports){
 "use strict";
 /*! ng-formio-builder v3.16.3 | https://unpkg.com/ng-formio-builder@3.16.3/LICENSE.txt */
 /*global window: false, console: false, jQuery: false */
@@ -89289,6 +89291,8 @@ app.directive('valueBuilder', _dereq_('./directives/valueBuilder'));
 
 app.directive('formBuilderConditional', _dereq_('./directives/formBuilderConditional'));
 
+app.directive('formBuilderDisable', _dereq_('./directives/formBuilderDisable'));
+
 /**
  * This workaround handles the fact that iframes capture mouse drag
  * events. This interferes with dragging over components like the
@@ -89345,5 +89349,5 @@ app.run([
 
 _dereq_('./components');
 
-},{"./components":333,"./constants/commonOptions":349,"./constants/formOptions":350,"./directives/formBuilder":351,"./directives/formBuilderComponent":352,"./directives/formBuilderConditional":353,"./directives/formBuilderDnd":354,"./directives/formBuilderElement":355,"./directives/formBuilderList":356,"./directives/formBuilderOption":357,"./directives/formBuilderOptionCustomValidation":358,"./directives/formBuilderOptionKey":359,"./directives/formBuilderOptionTags":360,"./directives/formBuilderRow":361,"./directives/formBuilderTable":362,"./directives/formBuilderTooltip":363,"./directives/jsonInput":364,"./directives/validApiKey":365,"./directives/valueBuilder":366,"./factories/BuilderUtils":367,"./factories/debounce":368}]},{},[369])(369)
+},{"./components":333,"./constants/commonOptions":349,"./constants/formOptions":350,"./directives/formBuilder":351,"./directives/formBuilderComponent":352,"./directives/formBuilderConditional":353,"./directives/formBuilderDisable":354,"./directives/formBuilderDnd":355,"./directives/formBuilderElement":356,"./directives/formBuilderList":357,"./directives/formBuilderOption":358,"./directives/formBuilderOptionCustomValidation":359,"./directives/formBuilderOptionKey":360,"./directives/formBuilderOptionTags":361,"./directives/formBuilderRow":362,"./directives/formBuilderTable":363,"./directives/formBuilderTooltip":364,"./directives/jsonInput":365,"./directives/validApiKey":366,"./directives/valueBuilder":367,"./factories/BuilderUtils":368,"./factories/debounce":369}]},{},[370])(370)
 });

@@ -10003,6 +10003,8 @@ module.exports = [
 ];
 
 },{"formiojs/utils":2,"lodash/get":176,"lodash/reject":202}],247:[function(_dereq_,module,exports){
+arguments[4][246][0].apply(exports,arguments)
+},{"dup":246,"formiojs/utils":2,"lodash/get":176,"lodash/reject":202}],248:[function(_dereq_,module,exports){
 "use strict";
 var _isNumber = _dereq_('lodash/isNumber');
 var _camelCase = _dereq_('lodash/camelCase');
@@ -10267,7 +10269,7 @@ module.exports = [
   }
 ];
 
-},{"lodash/assign":166,"lodash/camelCase":167,"lodash/isNumber":187}],248:[function(_dereq_,module,exports){
+},{"lodash/assign":166,"lodash/camelCase":167,"lodash/isNumber":187}],249:[function(_dereq_,module,exports){
 "use strict";
 module.exports = [
   'formioElementDirective',
@@ -10292,7 +10294,7 @@ module.exports = [
   }
 ];
 
-},{}],249:[function(_dereq_,module,exports){
+},{}],250:[function(_dereq_,module,exports){
 "use strict";
 module.exports = [
   function() {
@@ -10315,7 +10317,7 @@ module.exports = [
   }
 ];
 
-},{}],250:[function(_dereq_,module,exports){
+},{}],251:[function(_dereq_,module,exports){
 "use strict";
 /**
 * This directive creates a field for tweaking component options.
@@ -10384,7 +10386,7 @@ module.exports = ['COMMON_OPTIONS', '$filter', function(COMMON_OPTIONS, $filter)
   };
 }];
 
-},{}],251:[function(_dereq_,module,exports){
+},{}],252:[function(_dereq_,module,exports){
 "use strict";
 /**
 * A directive for editing a component's custom validation.
@@ -10424,7 +10426,7 @@ module.exports = function() {
   };
 };
 
-},{}],252:[function(_dereq_,module,exports){
+},{}],253:[function(_dereq_,module,exports){
 "use strict";
 /**
 * A directive for a field to edit a component's key.
@@ -10470,7 +10472,7 @@ module.exports = function() {
   };
 };
 
-},{}],253:[function(_dereq_,module,exports){
+},{}],254:[function(_dereq_,module,exports){
 "use strict";
 /**
 * A directive for a field to edit a component's tags.
@@ -10514,7 +10516,7 @@ module.exports = function() {
   };
 };
 
-},{"lodash/map":195}],254:[function(_dereq_,module,exports){
+},{"lodash/map":195}],255:[function(_dereq_,module,exports){
 "use strict";
 module.exports = [
   function() {
@@ -10536,7 +10538,7 @@ module.exports = [
   }
 ];
 
-},{}],255:[function(_dereq_,module,exports){
+},{}],256:[function(_dereq_,module,exports){
 "use strict";
 /**
  * A directive for a table builder
@@ -10590,7 +10592,7 @@ module.exports = function() {
   };
 };
 
-},{"lodash/merge":197}],256:[function(_dereq_,module,exports){
+},{"lodash/merge":197}],257:[function(_dereq_,module,exports){
 "use strict";
 /**
 * Invokes Bootstrap's popover jquery plugin on an element
@@ -10631,7 +10633,7 @@ module.exports = ['$filter', function($filter) {
   };
 }];
 
-},{}],257:[function(_dereq_,module,exports){
+},{}],258:[function(_dereq_,module,exports){
 "use strict";
 module.exports = function() {
   return {
@@ -10668,7 +10670,7 @@ module.exports = function() {
   };
 };
 
-},{}],258:[function(_dereq_,module,exports){
+},{}],259:[function(_dereq_,module,exports){
 "use strict";
 /*
 * Prevents user inputting invalid api key characters.
@@ -10691,7 +10693,7 @@ module.exports = function() {
   };
 };
 
-},{}],259:[function(_dereq_,module,exports){
+},{}],260:[function(_dereq_,module,exports){
 "use strict";
 /**
 * A directive that provides a UI to add {value, label} objects to an array.
@@ -10772,7 +10774,7 @@ module.exports = function() {
   };
 };
 
-},{"lodash/camelCase":167,"lodash/map":195}],260:[function(_dereq_,module,exports){
+},{"lodash/camelCase":167,"lodash/map":195}],261:[function(_dereq_,module,exports){
 "use strict";
 'use strict';
 
@@ -10881,7 +10883,7 @@ module.exports = ['FormioUtils', function(FormioUtils) {
   };
 }];
 
-},{}],261:[function(_dereq_,module,exports){
+},{}],262:[function(_dereq_,module,exports){
 "use strict";
 // Create an AngularJS service called debounce
 module.exports = ['$timeout','$q', function($timeout, $q) {
@@ -10915,7 +10917,7 @@ module.exports = ['$timeout','$q', function($timeout, $q) {
   };
 }];
 
-},{}],262:[function(_dereq_,module,exports){
+},{}],263:[function(_dereq_,module,exports){
 "use strict";
 /*! ng-formio-builder v3.16.3 | https://unpkg.com/ng-formio-builder@3.16.3/LICENSE.txt */
 /*global window: false, console: false, jQuery: false */
@@ -11015,6 +11017,8 @@ app.directive('valueBuilder', _dereq_('./directives/valueBuilder'));
 
 app.directive('formBuilderConditional', _dereq_('./directives/formBuilderConditional'));
 
+app.directive('formBuilderDisable', _dereq_('./directives/formBuilderDisable'));
+
 /**
  * This workaround handles the fact that iframes capture mouse drag
  * events. This interferes with dragging over components like the
@@ -11071,5 +11075,5 @@ app.run([
 
 _dereq_('./components');
 
-},{"./components":226,"./constants/commonOptions":242,"./constants/formOptions":243,"./directives/formBuilder":244,"./directives/formBuilderComponent":245,"./directives/formBuilderConditional":246,"./directives/formBuilderDnd":247,"./directives/formBuilderElement":248,"./directives/formBuilderList":249,"./directives/formBuilderOption":250,"./directives/formBuilderOptionCustomValidation":251,"./directives/formBuilderOptionKey":252,"./directives/formBuilderOptionTags":253,"./directives/formBuilderRow":254,"./directives/formBuilderTable":255,"./directives/formBuilderTooltip":256,"./directives/jsonInput":257,"./directives/validApiKey":258,"./directives/valueBuilder":259,"./factories/BuilderUtils":260,"./factories/debounce":261}]},{},[262])(262)
+},{"./components":226,"./constants/commonOptions":242,"./constants/formOptions":243,"./directives/formBuilder":244,"./directives/formBuilderComponent":245,"./directives/formBuilderConditional":246,"./directives/formBuilderDisable":247,"./directives/formBuilderDnd":248,"./directives/formBuilderElement":249,"./directives/formBuilderList":250,"./directives/formBuilderOption":251,"./directives/formBuilderOptionCustomValidation":252,"./directives/formBuilderOptionKey":253,"./directives/formBuilderOptionTags":254,"./directives/formBuilderRow":255,"./directives/formBuilderTable":256,"./directives/formBuilderTooltip":257,"./directives/jsonInput":258,"./directives/validApiKey":259,"./directives/valueBuilder":260,"./factories/BuilderUtils":261,"./factories/debounce":262}]},{},[263])(263)
 });
