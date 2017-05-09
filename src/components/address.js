@@ -24,7 +24,7 @@ module.exports = function(app) {
           {
             name: 'Conditional',
             template: 'formio/components/common/conditional.html'
-          },
+          }
          /* {
             name: 'Disable',
             template: 'formio/components/common/disable.html'
