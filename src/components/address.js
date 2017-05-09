@@ -24,6 +24,10 @@ module.exports = function(app) {
           {
             name: 'Conditional',
             template: 'formio/components/common/conditional.html'
+          },
+          {
+            name: 'Disable',
+            template: 'formio/components/common/conditional.html'
           }
         ],
         documentation: 'http://help.form.io/userguide/#address'
@@ -55,8 +59,7 @@ module.exports = function(app) {
           '<form-builder-option property="hidden"></form-builder-option>' +
           '<form-builder-option property="disabled"></form-builder-option>' +
           '<form-builder-option property="tableView"></form-builder-option>' +
-        '</ng-form>'+
-		'<strong>FABBIO2!!</strong>'
+        '</ng-form>'
       );
 
       $templateCache.put('formio/components/address/validate.html',
