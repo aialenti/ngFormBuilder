@@ -75146,7 +75146,7 @@ module.exports = function(app) {
       );
 
       $templateCache.put('formio/components/common/FAST.html',
-        '<div></div>'
+        '<form-builder-conditional></form-builder-conditional>'
       );
     }
   ]);
