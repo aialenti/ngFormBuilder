@@ -42,6 +42,7 @@ module.exports = [
         '$scope',
         function(
           $scope) {
+          console.log($scope);//#############################################
           // Default the current components conditionalDisable logic.
           $scope.component = $scope.component || {};
           $scope.component.conditionalDisable = $scope.component.conditionalDisable || {};
